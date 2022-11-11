@@ -1,0 +1,34 @@
+
+//Create Users
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "M Putra Pratama",
+    "email" : "admin@gmail.com",
+    "password" : "123",
+    "confPassword" : "123"
+}
+
+###
+//Get Users
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJwdXRyYSIsImVtYWlsIjoicHV0cmFAZ21haWwuY29tIiwiaWF0IjoxNjY0MjUzNzQ5LCJleHAiOjE2NjQyNTM3NjR9.zrkIA01H5mQm_We-FQEdb7gJDc_Lq8GbevLygOSVv90
+
+###
+//Login Users
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "putra@gmail.com",
+    "password" : "123"
+}
+
+###
+//Get refresh token
+GET http://localhost:5000/token
+
+###
+//Logout
+DELETE http://localhost:5000/logout
