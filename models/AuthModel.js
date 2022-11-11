@@ -3,7 +3,7 @@ import db from "../config/Database.js";
 
 const { DataTypes } = Sequelize;
 
-const Users = db.define('users',{
+const Auth = db.define('auth',{
     uuid:{
         type: DataTypes.STRING,
         defaultValue: DataTypes.UUIDV4,
@@ -18,20 +18,11 @@ const Users = db.define('users',{
     email:{
         type: DataTypes.STRING
     },
-    username:{
-        type: DataTypes.STRING
-    },
     password:{
-        type: DataTypes.STRING
-    },
-    refresh_token:{
-        type: DataTypes.TEXT
-    },
-    role:{
         type: DataTypes.STRING
     }
 },{
     freezeTableName:true
 });
 
-export default Users;
+export default Auth;
